@@ -1,0 +1,47 @@
+# Java скомпилированные файлы
+*.class
+
+# Логи
+*.log
+logs/
+*.log.*
+log/
+
+# Каталог с временными файлами
+tmp/
+temp/
+
+# Системные файлы IDE
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Maven/Gradle кеши
+.mvn/
+target/
+build/
+
+# Файлы окружения
+*.env
+*.properties
+
+# Конфигурации Docker
+docker-compose.yml
+docker-compose.override.yml
+
+# Spring Boot devtools
+spring-boot-devtools.jar
+
+# Файлы БД H2
+*.db
+
+# Локальные настройки
+.vscode/
