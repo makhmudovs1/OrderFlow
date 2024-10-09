@@ -30,12 +30,4 @@ public abstract class User {
     private String phone;
 
     public User() {}
-
-    public User(String username, String password, Role role, String email, String phone) {
-        this.username = username;
-        this.password = password;
-        this.role = role;
-        this.email = email;
-        this.phone = phone;
-    }
 }

@@ -15,6 +15,10 @@ public class Client extends User {
     }
 
     public Client(String username, String password, String email, String phone) {
-        super(username, password, Role.CLIENT, email, phone);
+        this();
+        this.setUsername(username);
+        this.setPassword(password);
+        this.setEmail(email);
+        this.setPhone(phone);
     }
 }
