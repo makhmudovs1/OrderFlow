@@ -6,12 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
 	@Autowired
 	private UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -19,14 +22,18 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Client client = new Client();
-		client.setUsername("Sher");
-		client.setPassword("sher");
-		client.setEmail("sher@gmail.com");
-		client.setPhone("123123123");
+		if (userRepository.existsByEmail("sher@gmail.com")) {
+			System.out.println("Error: Email is already in use!");
+		} else {
+			Client client = new Client();
+			client.setUsername("Sher");
+			client.setPassword(passwordEncoder.encode("sher"));
+			client.setEmail("sher@gmail.com");
+			client.setPhone("123123123");
 
-		userRepository.save(client);
+			userRepository.save(client);
 
-		System.out.println(client.getUsername());
+			System.out.println(client.getUsername());
+		}
 	}
 }

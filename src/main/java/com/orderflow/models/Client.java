@@ -9,6 +9,9 @@ import lombok.Data;
 @Table(name = "clients")
 public class Client extends User {
 
+    private String firstName;
+    private String lastName;
+
     public Client() {
         super();
         this.setRole(Role.CLIENT);
