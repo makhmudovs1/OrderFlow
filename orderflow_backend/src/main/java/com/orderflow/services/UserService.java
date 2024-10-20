@@ -1,22 +1,15 @@
-package com.orderflow.controllers;
+package com.orderflow.services;
 
 import com.orderflow.dto.RegistrationRequest;
 import com.orderflow.models.Client;
 import com.orderflow.models.Role;
 import com.orderflow.repositories.UserRepository;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
-@RestController
-// Обозначает класс как контроллер, в котором каждый метод возвращает объект вместо представления.
-@RequestMapping("api/auth")
-// Устанавливает базовый URL для всех методов в этом контроллере.
-public class AuthController {
+@Service
+public class UserService {
     @Autowired
     private UserRepository userRepository;
 
@@ -24,9 +17,7 @@ public class AuthController {
     // Используется для шифрования пароля перед сохранением
     private PasswordEncoder passwordEncoder;
 
-    @PostMapping("/register")
-    // Метод registerUser обрабатывает POST-запрос на /api/auth/register.
-    public String registerUser(@Valid @RequestBody RegistrationRequest request) {
+    public String registerClient(RegistrationRequest request) {
         // Проверка на уникальность email и username
         if (userRepository.existsByEmail(request.getEmail())) {
             return "Email already in use";
@@ -50,5 +41,4 @@ public class AuthController {
 
         return "Successfully registered";
     }
-
 }
