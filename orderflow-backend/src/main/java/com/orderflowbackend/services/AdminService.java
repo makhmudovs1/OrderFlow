@@ -1,7 +1,7 @@
-package com.orderflow.orderflowbackend.services;
+package com.orderflowbackend.services;
 
-import com.orderflow.orderflowbackend.models.Admin;
-import com.orderflow.orderflowbackend.repositories.AdminRepository;
+import com.orderflowbackend.models.Admin;
+import com.orderflowbackend.repositories.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

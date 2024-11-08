@@ -1,4 +1,4 @@
-package com.orderflow.orderflowbackend.models;
+package com.orderflowbackend.models;
 
 public enum Role {
     CLIENT,

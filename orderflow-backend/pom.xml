@@ -99,7 +99,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.orderflow.orderflowbackend.Application</mainClass>
+					<mainClass>com.orderflowbackend.Application</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

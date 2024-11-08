@@ -1,8 +1,8 @@
-package com.orderflow.orderflowbackend.repositories;
+package com.orderflowbackend.repositories;
 
-import com.orderflow.orderflowbackend.models.Admin;
+import com.orderflowbackend.models.Courier;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AdminRepository extends JpaRepository<Admin, Long> {
+public interface CourierRepository extends JpaRepository<Courier, Long> {
     // Здесь можно добавить дополнительные методы, если нужно
 }

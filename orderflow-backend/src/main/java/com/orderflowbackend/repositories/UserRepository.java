@@ -1,6 +1,6 @@
-package com.orderflow.orderflowbackend.repositories;
+package com.orderflowbackend.repositories;
 
-import com.orderflow.orderflowbackend.models.User;
+import com.orderflowbackend.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

@@ -1,7 +1,7 @@
-package com.orderflow.orderflowbackend;
+package com.orderflowbackend;
 
-import com.orderflow.orderflowbackend.models.Client;
-import com.orderflow.orderflowbackend.repositories.UserRepository;
+import com.orderflowbackend.models.Client;
+import com.orderflowbackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

@@ -1,6 +1,6 @@
-package com.orderflow.orderflowbackend.repositories;
+package com.orderflowbackend.repositories;
 
-import com.orderflow.orderflowbackend.models.Client;
+import com.orderflowbackend.models.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClientRepository extends JpaRepository<Client, Long> {

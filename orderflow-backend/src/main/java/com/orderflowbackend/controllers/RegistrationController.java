@@ -1,7 +1,7 @@
-package com.orderflow.orderflowbackend.controllers;
+package com.orderflowbackend.controllers;
 
-import com.orderflow.orderflowbackend.dto.RegistrationRequest;
-import com.orderflow.orderflowbackend.services.UserService;
+import com.orderflowbackend.dto.RegistrationRequest;
+import com.orderflowbackend.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

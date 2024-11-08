@@ -1,7 +1,7 @@
-package com.orderflow.orderflowbackend.services;
+package com.orderflowbackend.services;
 
-import com.orderflow.orderflowbackend.models.Client;
-import com.orderflow.orderflowbackend.repositories.ClientRepository;
+import com.orderflowbackend.models.Client;
+import com.orderflowbackend.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.orderflow.orderflowbackend.models;
+package com.orderflowbackend.models;
 
 import jakarta.persistence.*;
 import lombok.Data;

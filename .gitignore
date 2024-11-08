@@ -45,3 +45,5 @@ spring-boot-devtools.jar
 
 # Локальные настройки
 .vscode/
+
+node_modules/

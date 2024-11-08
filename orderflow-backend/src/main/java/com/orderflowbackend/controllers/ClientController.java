@@ -1,7 +1,7 @@
-package com.orderflow.orderflowbackend.controllers;
+package com.orderflowbackend.controllers;
 
-import com.orderflow.orderflowbackend.models.Client;
-import com.orderflow.orderflowbackend.services.ClientService;
+import com.orderflowbackend.models.Client;
+import com.orderflowbackend.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
