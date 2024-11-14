@@ -30,3 +30,6 @@
 
 ## Ссылка на шаблон проекта
 [Figma](https://www.figma.com/design/vPaJ5cMiERLxkg8CqQw6KY/OrderFlow?t=CVZhctUz37dXjMhq-1)
+
+## Ссылка на концептуальную и логическую модель БД
+[Miro](https://miro.com/app/board/uXjVLRzfSdY=/)

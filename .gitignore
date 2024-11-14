@@ -25,7 +25,6 @@ temp/
 .settings/
 
 # Maven/Gradle кеши
-.mvn/
 target/
 build/
 
