@@ -9,17 +9,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner {
-
-	@Autowired
-	private UserRepository userRepository;
+// public class Application implements CommandLineRunner {
+public class Application {
+    /*@Autowired
+    private UserRepository userRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
-
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
-
+    */
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+	/*
 	@Override
 	public void run(String... args) throws Exception {
 		if (userRepository.existsByEmail("sher@gmail.com")) {
@@ -35,5 +35,5 @@ public class Application implements CommandLineRunner {
 
 			System.out.println(client.getUsername());
 		}
-	}
+	}*/
 }

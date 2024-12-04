@@ -3,19 +3,30 @@ package com.orderflowbackend.services;
 import com.orderflowbackend.dto.RegistrationRequest;
 import com.orderflowbackend.models.Client;
 import com.orderflowbackend.models.Role;
+import com.orderflowbackend.models.User;
 import com.orderflowbackend.repositories.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
-    @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    // Используется для шифрования пароля перед сохранением
     private PasswordEncoder passwordEncoder;
+
+    public User getUserByUsername(String username) {
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    }
+
+    public UserDetailsService userDetailsService() {
+        return this::getUserByUsername;
+    }
 
     public String registerClient(RegistrationRequest request) {
         // Проверка на уникальность email и username
@@ -34,8 +45,8 @@ public class UserService {
         client.setPhone(request.getPhone());
         client.setRole(Role.CLIENT);
 
-        client.setFirstName(request.getFirstname());
-        client.setLastName(request.getLastname());
+        client.setFirstname(request.getFirstname());
+        client.setLastname(request.getLastname());
 
         userRepository.save(client);
 

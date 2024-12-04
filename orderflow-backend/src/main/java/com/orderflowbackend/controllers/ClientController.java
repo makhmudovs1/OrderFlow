@@ -40,8 +40,8 @@ public class ClientController {
                 .orElseThrow(() -> new RuntimeException("Client not found with id + " + id));
 
         // Обновляем поля
-        client.setFirstName(clientDetails.getFirstName());
-        client.setLastName(clientDetails.getLastName());
+        client.setFirstname(clientDetails.getFirstname());
+        client.setLastname(clientDetails.getLastname());
         client.setEmail(clientDetails.getEmail());
         client.setPhone(clientDetails.getPhone());
         client.setUsername(clientDetails.getUsername());
