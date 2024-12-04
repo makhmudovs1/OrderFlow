@@ -16,6 +16,10 @@ spring:
 server:
   port: 8080
 
+logging:
+  level:
+    org.springframework.security: DEBUG
+
 token:
   signing:
     key: "dGhpcyBpc19hX3ZlcnlfbG9uZ19hbmRfc2VjdXJlX3NlY3JldF9rZXlfZm9yX2p3dA=="

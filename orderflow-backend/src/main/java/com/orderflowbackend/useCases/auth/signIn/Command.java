@@ -7,7 +7,6 @@ import lombok.Data;
 @Builder
 public class Command {
     private String username;
-  //  private String email;
-
+    private String email;
     private String password;
 }

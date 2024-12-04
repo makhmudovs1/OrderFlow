@@ -53,6 +53,8 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    // это все для пароля при входе, т.к наш способ хэширования каждый раз создает разные хэши, поэтому пароли если даже
+    // совпадают, то их хэши могут быть разными
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();

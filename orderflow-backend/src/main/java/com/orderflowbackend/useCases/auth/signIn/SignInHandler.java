@@ -16,7 +16,6 @@ public class SignInHandler {
 
     private final UserRepository userRepository;
     private final JwtService jwtService;
-    private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
 
     public Response handle(Command command) {
